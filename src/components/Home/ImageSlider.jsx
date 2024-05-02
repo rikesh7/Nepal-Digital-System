@@ -1,55 +1,40 @@
+import  { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+// Import your CSS file for custom styling
 
 function ImageSlider() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    // Use modulo operator to loop back to 0 after reaching the last element
+    setIndex(selectedIndex % slides.length);
+  };
+
+  const slides = [
+   
+   
+    { src: '/officeworks4.jpg', alt: 'Third slide' },
+    { src: '/officeworks5.jpg', alt: 'Third slide' },
+    
+    
+    { src: '/officeworks8.jpg', alt: 'Third slide' },
+  
+    // Add more slides as needed
+  ];
+
   return (
-    <Carousel data-bs-theme="dark" className='carousel mb-5'>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 resolution"
-          src="/jorge-ramirez-2bJ2OH9e9J8-unsplash.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption className="top-left-caption">
-          <div className='caption'>
-          {/* <h1>NEPAL&apos;S</h1>
-          <p>No.1 IoT consulting service provider</p> */}
-          </div>
-        </Carousel.Caption>
-        <div className="overlay"></div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 resolution"
-          src="/testimonial-2.jpg"
-          alt="Second slide"
-        />
-        <Carousel.Caption className="top-left-caption">
-          <div className='caption'>
-        {/* <h1>NEPAL&apos;S</h1>
-          <p>only trusted Embedded system&apos;s experts</p> */}
-          </div>
-        </Carousel.Caption>
-        <div className="overlay"></div>
-
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 resolution"
-          src="/vishnu-mohanan-yQpAaMsQzYE-unsplash.jpg"
-          alt="Third slide"
-        />
-        <Carousel.Caption className="top-left-caption">
-          <div className='caption'>
-        {/* <h1>NEPAL&apos;S</h1>
-          <p>
-          Product design and Consulting experts
-          </p> */}
-          </div>
-          
-        </Carousel.Caption>
-        <div className="overlay"></div>
-
-      </Carousel.Item>
+    <Carousel activeIndex={index} onSelect={handleSelect} indicators={false} className=' carousel'>
+      {slides.map((slide, idx) => (
+        <Carousel.Item key={idx}>
+          <img className="d-block  resolution   " src={slide.src} alt={slide.alt} />
+        </Carousel.Item>
+      ))}
+      {/* Custom Indicators */}
+      <ol className="carousel-indicators rounded">
+        {slides.map((_, idx) => (
+          <li key={idx} className={index % slides.length === idx ? 'active' : ''} onClick={() => handleSelect(idx)}></li>
+        ))}
+      </ol>
     </Carousel>
   );
 }

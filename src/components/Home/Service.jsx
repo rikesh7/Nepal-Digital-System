@@ -1,52 +1,60 @@
-import CustomContainer from "../CustomContainer";
 
 
-function Services() {
-  return (
-    <CustomContainer>
-    <div className="services ">
-      <h6 className="mb-4">Our Services</h6>
-      <h1 className="text-uppercase mt-4">Services we offer</h1>
-      <div className="row gx-5">
-        <div className="card-title col-lg-3">
-          <h3 className="mt-4">IoT</h3>
-          <p className="card-text justify-text mt-4">
-            At Nepal Digital Systems, we are a leading provider of IoT
-            solutions. We offer custom solutions to businesses across various
-            industries,such as smart homes,  <br /><br /><a className="text-white" href="">Read More...</a>
-          </p>
-         
-        </div>
-        <div className="card-title col-lg-3">
-          <h3 className="text-uppercase mt-4">Embedded System Engineering</h3>
-          <p className="card-text mt-4">
-            Nepal Digital Systems is an expert in Embedded System Design and
-            Development, offering custom solutions for various applications
-            including industrial<br /><br /><a className="text-white" href="">Read More...</a>
-          </p>
-         
-        </div>
-        <div className="card-title col-lg-3">
-          <h3 className="text-uppercase mt-4">Web Application development</h3>
-          <p className="card-text mt-4">
-            Nepal Digital Systems offers custom web design and development
-            services to help businesses create a strong online presence. Our
-            experienced team <br /><br /><a className="text-white" href="">Read More...</a>
-          </p>
-         
-        </div>
-        <div className="card-title col-lg-3">
-          <h3 className="text-uppercase mt-4">Mobile Application Development</h3>
-          <p className="card-text mt-4">
-            Nepal Digital Systems develops custom mobile and desktop apps using
-            the latest technologies to provide a seamless user experience. From
-            utility apps <br /><br /><a className="text-white" href="">Read More...</a>
-          </p>
-        
-        </div>
-      </div>
-    </div></CustomContainer>
-  );
+import { Link } from "react-router-dom";
+import { FaNetworkWired,FaMicrochip,FaDesktop,FaMobileAlt} from 'react-icons/fa';
+function Services(){ 
+ return(
+ <div className="container   mt-5  " >
+ 
+   <div className=" row gx-5 mt-4 "style={{backgroundColor:'#ccc',borderRadius:'8px'}}>
+   
+     <Link className="col-lg-3 text-center gx-5 service-card " to="/iot" >
+     
+       <FaNetworkWired className=" mt-4    "/>
+       <h4 className=" title mt-4 " >
+        IoT
+       </h4>
+       <p className="justify-text mt-4" > At Nepal Digital Systems, we are a leading provider of IoT solutions.
+                      We offer custom solutions to businesses across various industries, 
+                     such as smart homes, industrial automation, and agriculture monitoring.
+                       </p>
+     </Link>
+   
+     <Link className="col-lg-3 text-center gx-5  service-card " to="/embedded" >
+     
+       <FaMicrochip className="mt-4"/>
+       <h4 className=" title mt-4">
+       Embedded System Engineering
+       </h4>
+       <p className="justify-text mt-4" > Nepal Digital Systems is an expert in Embedded System Design and Development, 
+                     offering custom solutions for various applications including industrial ensures
+                     </p>
+     </Link>
+     
+     <Link className="col-lg-3 text-center gx-5  service-card " to="/web" >
+     
+       <FaDesktop className="mt-4"/>
+       <h4 className=" title mt-4">
+       Web Application development
+       </h4>
+       <p className="justify-text mt-4">  At Nepal Digital Systems, we are a leading provider of IoT solutions.
+                    We offer custom solutions to businesses across various industries, 
+                    such as smart homes, industrial automation, and agriculture monitoring.
+                  </p>
+     </Link>
+    
+     <Link className="col-lg-3 text-center gx-5  service-card "  to="/mobile" >
+     
+       <FaMobileAlt className="mt-4"/>
+       <h4 className=" title mt-4">
+       Mobile Application Development
+       </h4>
+       <p className="justify-text mt-4">   Nepal Digital Systems develops custom mobile and desktop apps using the latest technologies to provide a seamless user experience.</p>
+     </Link>
+   
+   </div>
+   
+ </div>
+)
 }
-
 export default Services;
