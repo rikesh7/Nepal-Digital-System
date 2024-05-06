@@ -7,7 +7,7 @@ dotenv.config();
 export default defineConfig({
   plugins: [react()],
   server:{
-    host:"192.168.1.77",
+    host:"192.168.1.67",
     
    },
   //  define: {

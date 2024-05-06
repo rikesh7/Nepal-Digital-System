@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://rikesh7.github.io/Nepal-Digital-System",
   "scripts": {
+    "dev":"vite",
     "deploy": "vite build && gh-pages -d dist",
     "production": "vite",
     "build": "vite build",

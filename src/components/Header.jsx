@@ -5,10 +5,10 @@ function Header() {
     <div className=" container  ">
       <nav className="navbar  navbar-expand-lg d-flex justify-content-between">
 
-<div>
+
        <Link className="logo " to={"/"}> <img src="/ndslogo.png" alt="NDS" /></Link>      
-       </div>
-  <div>
+    
+       
     <button
       className="navbar-toggler navbar-light "
       type="button"
@@ -20,8 +20,9 @@ function Header() {
     >
       <span className="navbar-toggler-icon " />
     </button>
-    <div className="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul className="navbar-nav">
+   
+    <div className="collapse navbar-collapse  " id="navbarSupportedContent">
+      <ul className="  navbar-nav   ms-auto">
         <li className="nav-item ">
           <Link className="nav-link " aria-current="page" to="/">
             Home
@@ -91,7 +92,7 @@ function Header() {
        
       </ul>
     </div>
-    </div>
+   
 </nav>
 
       

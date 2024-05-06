@@ -5,7 +5,7 @@ function IoT() {
     <div className="container mt-5">
        <div className="iot-image mb-5" > </div>
         <div className="">
-        <h3>What is the Internet of Things (IoT)?</h3>
+        <h1 className="colorPage">Internet of Things </h1>
         <p>
         The term IoT, or Internet of Things, refers to the collective network of connected devices and the technology that facilitates communication between devices and the cloud, as well as between the devices themselves. Thanks to the advent of inexpensive computer chips and high bandwidth telecommunication, we now have billions of devices  connected to the internet. This means everyday devices like toothbrushes, vacuums, cars, and machines can use sensors to collect data and respond intelligently to users.   
         </p>

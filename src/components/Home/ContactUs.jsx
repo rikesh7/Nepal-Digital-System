@@ -69,8 +69,8 @@ if(token){
                         <p>
                           {" "}
                           <MdCall  />{" "}
-                          <Link className="colorPage" to="tel:+1234567890" >01-5911134</Link>,{" "}
-                          <Link className="colorPage" href="tel:+1234567890" >+977-9851280029</Link>
+                          <Link className="colorPage" to="tel:01-5911134" >01-5911134</Link>,{" "}
+                          <Link className="colorPage" to="tel:+977-9851280029" >+977-9851280029</Link>
                         </p>
                       </li>
                       <li className="">
