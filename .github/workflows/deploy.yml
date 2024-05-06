@@ -32,12 +32,12 @@ jobs:
         run: |
           git config --global user.name "rikesh7"
           git config --global user.email "rikeshacharya7@gmail.com"
-          with:
-            token: ${{ secrets.GH_TOKEN }}
       - name: Build and Deploy
         run: |
           npm run build
           echo "Build completed!"
           which gh-pages
           gh-pages -d dist
+          with:
+            token: ${{ secrets.GH_TOKEN }}
           # token: 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
