@@ -44,4 +44,5 @@ jobs:
           echo "Build completed!"
           # Deploy the build artifacts (e.g., index.html) to GitHub Pages
           # Adjust the path to your build output directory
+          which gh-pages
           gh-pages -d dist
