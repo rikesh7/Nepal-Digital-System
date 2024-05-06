@@ -38,6 +38,6 @@ jobs:
           echo "Build completed!"
           which gh-pages
           gh-pages -d dist
-          # with:
-          #   token: ${{ secrets.GH_TOKEN }}
+          with:
+            token: ${{ secrets.GH_TOKEN }}
           # token: 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
