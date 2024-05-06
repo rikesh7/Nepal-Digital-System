@@ -28,14 +28,16 @@ jobs:
         run: |
           npm install
           npm install -g gh-pages
+      - name: Configure Git user
+        run: |
+          git config --global user.name "rikeshacharya7"
+          git config --global user.email "rikeshacharya7@gmail.com"
+          with:
+            token: ${{ secrets.GH_TOKEN }}
       - name: Build and Deploy
         run: |
           npm run build
           echo "Build completed!"
           which gh-pages
           gh-pages -d dist
-          with:
-            git config --global user.name "rikeshacharya7"
-            git config --global user.email "rikeshacharya7@gmail.com"
-            token: ${{ secrets.GH_TOKEN }}
           # token: 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
