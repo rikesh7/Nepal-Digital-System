@@ -35,5 +35,7 @@ jobs:
           which gh-pages
           gh-pages -d dist
           with:
+            git config --global user.name "rikeshacharya7"
+            git config --global user.email "rikeshacharya7@gmail.com"
             token: ${{ secrets.GH_TOKEN }}
           # token: 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
