@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm install -g gh-pages
+          # npm install -g gh-pages
       - name: Configure Git user
         run: |
           git config --global user.email "acharyarikesh7@gmail.com"
