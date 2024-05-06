@@ -36,10 +36,10 @@ jobs:
         run: |
           npm run build
           echo "Build completed!"
-      - name: Deploy
-        run: |
-          which gh-pages
-          gh-pages -d dist
-          with:
-            token: ${{ secrets.GH_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+          token: ${{ secrets.GH_TOKEN }}
           # token: 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
