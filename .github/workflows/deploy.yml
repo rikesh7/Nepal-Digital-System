@@ -30,7 +30,7 @@ jobs:
           npm install -g gh-pages
       - name: Configure Git user
         run: |
-          git config --global user.name "rikeshacharya7"
+          git config --global user.name "rikesh7"
           git config --global user.email "rikeshacharya7@gmail.com"
           with:
             token: ${{ secrets.GH_TOKEN }}
