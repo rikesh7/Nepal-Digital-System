@@ -41,5 +41,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
-          personal_token: ${{ secrets.GH_TOKEN }}
+          # personal_token: ${{ secrets.GH_TOKEN }}
           # token: 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
