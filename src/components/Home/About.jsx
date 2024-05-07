@@ -1,6 +1,6 @@
 
 
-import SocialIcons from "../SocialIcons";
+
 import  { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -39,7 +39,7 @@ function AboutUs() {
           Expertise in Embedded System Engineering and IoT solutions
           </h5>
           <p className="mt-4 justify-text">
-        Our group specializes in hardware design, embedded softwares, IoT setup and integration, integrating systems and devices with ease to maximize productivity. Furthermore, we provide all-inclusive services for developing desktop, mobile, and online applications, creating UIs that are easy to use and feature-rich on all platforms. By prioritizing scalability, we make sure that our solutions expand to meet your company's demands. Our end-to-end assistance covers everything from production to installation and continuous maintenance to keep your systems operating efficiently. At NDS, we're dedicated to advancing technology and providing our clients with outstanding outcomes.
+        Our group specializes in hardware design, embedded softwares, IoT setup and integration, integrating systems and devices with ease to maximize productivity. Furthermore, we provide all-inclusive services for developing desktop, mobile, and online applications, creating UIs that are easy to use and feature-rich on all platforms. By prioritizing scalability, we make sure that our solutions expand to meet your company&apos;s demands. Our end-to-end assistance covers everything from production to installation and continuous maintenance to keep your systems operating efficiently. At NDS, we're dedicated to advancing technology and providing our clients with outstanding outcomes.
           </p>
          </div>
         

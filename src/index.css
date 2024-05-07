@@ -183,7 +183,7 @@ label
 {
   height: 25rem;
   width: 100%;
-  background-image: url(public/iot.jpg);
+  background-image: url(/iot.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -193,7 +193,7 @@ label
 {
   height: 25rem;
   width: 100%;
-  background-image: url(public/embedded.jpg);
+  background-image: url(/embedded.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -202,7 +202,7 @@ label
 {
   height: 25rem;
   width: 100%;
-  background-image: url(public/web.jpg);
+  background-image: url(/web.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -211,7 +211,7 @@ label
 {
   height: 25rem;
   width: 100%;
-  background-image: url(public/mobile.jpg);
+  background-image: url(/mobile.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
