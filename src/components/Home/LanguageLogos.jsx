@@ -84,7 +84,7 @@ function LanguageLogos() {
                   <Link to={'https://www.mathworks.com/products/matlab.html'}><img className="img-fluid" src="/client16.png" alt="Image" /></Link>
                 </div>
                 <div className="col-4 owl-element">
-                  <Link to={'https://www.kikad.com/'} ><img className="img-fluid" src="/client17.png" alt="Image" /></Link>
+                  <Link to={'https://www.kikad.org/'} ><img className="img-fluid" src="/client17.png" alt="Image" /></Link>
                 </div>
                 <div className="col-4 owl-element">
                   <Link to={'https://www.infineon.com/'}><img className="img-fluid" src="/client18.png" alt="Image" /></Link>
