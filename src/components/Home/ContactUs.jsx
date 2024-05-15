@@ -6,20 +6,20 @@ import { useState } from "react";
 
 
 function ContactUs() {
-  const token = import.meta.env.bearerToken;
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  console.log(token);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
    
-if(token){
+
     try {
       
       // Send form data to the backend
-      const response = await fetch('/192.168.1.76:8000/contact', {
+      const response = await fetch('http://192.168.1.76:8000/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -34,14 +34,17 @@ if(token){
       // Get confirmation message from backend response
       const data = await response.json();
       console.log(data);  
-
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
     
     } catch (error) {
       // console.error('Error submitting form:', error);
       // setConfirmationMessage('An error occurred while submitting the form.');
       // console.log(confirmationMessage);
     }
-  }};
+  };
   return (
     <div className=" container ">
     
@@ -159,7 +162,7 @@ if(token){
              
                onChange={(e) => setMessage(e.target.value)} 
               style={{ height: 300 }}
-              defaultValue={""}
+             
             />
             <label htmlFor="message">Message</label>
           </div>
@@ -167,7 +170,7 @@ if(token){
 
         <div className="col-12">
           <button
-            className="btn  w-100  revColor"
+            className="btn contactBtn w-100  revColor"
           
             type="submit"
           >

@@ -7,10 +7,10 @@ dotenv.config();
 export default defineConfig({
   plugins: [react()],
  
-  // server:{
-  //   host:"192.168.1.67",
+  server:{
+    host:"192.168.1.67",
     
-  //  },
+   },
   //  define: {
   //   'process.env': {
   //     token: JSON.stringify(process.env.bearerToken)
