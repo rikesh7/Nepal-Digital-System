@@ -1,7 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
 
-
+import { useState } from "react";
 function Header() {
+  const navigate = useNavigate();
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
+  const handleServicesClick = (e) => {
+    e.preventDefault();  // Prevent the default link behavior
+    navigate('/');  // Redirect to the /services page
+  };
   return (
     <div className=" container  ">
       <nav className="navbar  navbar-expand-lg d-flex justify-content-between">
@@ -45,21 +58,23 @@ function Header() {
            Career
           </Link>
         </li>
-        <li className="nav-item dropdown ">
+        <li className="nav-item dropdown "      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>
          
           <Link
-            className="nav-link dropdown-toggle"
-            to="#"
+            className="nav-link  dropdown-toggle"
+            to="/"
             id="navbarDropdownMenuLink"
             role="button"
             data-bs-toggle="dropdown"
-            aria-expanded="false"
+            aria-expanded={dropdownVisible ? 'true' : 'false'}
+            onClick={handleServicesClick}
           >
             Services
           </Link>
           <ul
-            className="dropdown-menu centered "
-            aria-labelledby="navbarDropdownMenuLink"
+            className={`dropdown-menu centered ${dropdownVisible ? 'show' : ''}`}
+        aria-labelledby="navbarDropdownMenuLink"
           ><Link  to="/iot">
             <li>
               

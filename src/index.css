@@ -5,16 +5,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "InfoTextWeb W04 Regular,"Roboto", sans-serif"; 
   font-size: 16px;
 }
 
+@font-face {
+  font-family: "InfoTextWeb W04 Regular";
+  src: url("https://db.onlinewebfonts.com/t/c84b771a05a71f0c386b33e2d61011af.eot");
+  src: url("https://db.onlinewebfonts.com/t/c84b771a05a71f0c386b33e2d61011af.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/c84b771a05a71f0c386b33e2d61011af.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/c84b771a05a71f0c386b33e2d61011af.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/c84b771a05a71f0c386b33e2d61011af.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/c84b771a05a71f0c386b33e2d61011af.svg#InfoTextWeb W04 Regular")format("svg");
+}
 body {
   
-  background-image:url(/background.jpg) ;
+  /* background-image:url(/background.jpg) ;
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:cover; */
+  background-image: linear-gradient(#ccc,#a0a0a0 );
   
 }
 .gallery
@@ -88,11 +98,25 @@ label
  justify-content: space-between;
 }
 /*Services section*/
+/* .service-card1
+{
+  cursor: pointer;
+  background-color: #25426b;
+  color: #ccc;
+  border-radius: 3%;
+}
+.service-card1:hover
+{
+ color: #25426b;
+ background-color: #ccc;
+  transition: 1s;
 
+} */
 .service-card
 {
   cursor: pointer;
   color: #25426b;
+  background-color: #ccc;
   border-radius: 3%;
 
 }
@@ -103,6 +127,7 @@ label
   transition: 1s;
 
 }
+
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
@@ -391,3 +416,29 @@ width: 100%;
 color: #fff;
 }
 
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+}
+
+.nav-item.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-item.dropdown .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+.nav-item.dropdown.show .dropdown-toggle::after {
+  transform: rotate(-180deg);
+}

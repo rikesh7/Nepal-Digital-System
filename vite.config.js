@@ -8,13 +8,13 @@ export default defineConfig({
   plugins: [react()],
  
   server:{
-    host:"192.168.1.67",
+    host:"192.168.1.83",
     
    },
-  //  define: {
-  //   'process.env': {
-  //     token: JSON.stringify(process.env.bearerToken)
-  //   }
-  // }
+   define: {
+    'process.env': {
+      token: JSON.stringify(process.env.bearerToken)
+    }
+  }
    
 })

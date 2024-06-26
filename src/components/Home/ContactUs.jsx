@@ -19,7 +19,7 @@ function ContactUs() {
     try {
       
       // Send form data to the backend
-      const response = await fetch('http://192.168.1.76:8000/api/contact', {
+      const response = await fetch('http://192.168.1.76:8000/api/contacts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -43,6 +43,7 @@ function ContactUs() {
       // console.error('Error submitting form:', error);
       // setConfirmationMessage('An error occurred while submitting the form.');
       // console.log(confirmationMessage);
+      
     }
   };
   return (
@@ -79,8 +80,7 @@ function ContactUs() {
                       <li className="">
                         <p>
                         <MdMail/>
-                          <Link className="colorPage" to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTRzdVcrwhsxMHSCMQDzKBtbWXBnqBDPGDkSXqsbbmQhZXtCSFWVKKctQlkxbpMpXcvnfm">
-                        email@nepaldigisys.com
+                          <Link className="colorPage" to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTRzdVcrwhsxMHSCMQDzKBtbWXBnqBDPGDkSXqsbbmQhZXtCSFWVKKctQlkxbpMpXcvnfm"> email@nepaldigisys.com
                           </Link>
                         </p>
                       </li>
@@ -120,7 +120,8 @@ function ContactUs() {
               className="form-control"
               value={name}
               id="name"
-              onChange={(e) => setName(e.target.value)} required
+              onChange={(e) =>{ const value = e.target.value.replace(/[^A-Za-z]/g, '');
+               setName(value)}} required
               placeholder=""
             />
             <label htmlFor="name">Name</label>
@@ -144,6 +145,8 @@ function ContactUs() {
           <div className="form-floating">
             <input
               type="text"
+              title="Only Letters"
+   
               className="form-control"
               id="subject"
               value={subject} 
